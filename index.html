@@ -4,71 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Dorsaf Kheriji</title>
+  <!-- Font Awesome pour les icônes -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f9fafb;
-      color: #333;
-    }
-    header {
-      background: #007acc;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 1.2em;
-    }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    section {
-      margin-bottom: 50px;
-    }
-    h2 {
-      color: #007acc;
-      border-bottom: 2px solid #007acc;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-    .project {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #007acc;
-      color: white;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    /* Reset & fonts */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background: #f9fafb; color: #333; }
+    a { text-decoration: none; color: inherit; }
+    h1,h2,h3 { color: #007acc; }
+
+    /* Header */
+    header { background: #007acc; color: white; padding: 60px 20px; text-align: center; }
+    header h1 { font-size: 2.5em; }
+    header p { font-size: 1.2em; margin-top: 10px; }
+
+    /* Navbar */
+    nav { background: #005fa3; padding: 10px 20px; position: sticky; top: 0; z-index: 1000; }
+    nav ul { display: flex; justify-content: center; list-style: none; }
+    nav ul li { margin: 0 15px; }
+    nav ul li a { color: white; font-weight: bold; }
+    nav ul li a:hover { text-decoration: underline; }
+
+    /* Sections */
+    main { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+    section { margin-bottom: 60px; }
+    h2 { border-bottom: 2px solid #007acc; display: inline-block; margin-bottom: 20px; padding-bottom: 5px; }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .project { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .project:hover { transform: translateY(-5px); }
+    .project h3 { margin-bottom: 10px; }
+
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; gap: 15px; }
+    .skill { background: white; padding: 10px 15px; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+
+    /* Contact */
+    .contact a { color: #007acc; }
+    .contact a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer { text-align: center; padding: 20px; background: #007acc; color: white; }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <h1>Dorsaf Kheriji</h1>
     <p>Ingénieure en développement web</p>
   </header>
 
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <section>
+    <!-- À propos -->
+    <section id="about">
       <h2>À propos</h2>
       <p>
         Passionnée par le développement web, je conçois et développe des applications performantes et évolutives
@@ -76,38 +76,56 @@
       </p>
     </section>
 
-    <section>
+    <!-- Projets -->
+    <section id="projects">
       <h2>Projets récents</h2>
-
-      <div class="project">
-        <h3>Nom du projet 1</h3>
-        <p>Courte description du projet. (Tu peux décrire ton rôle, le contexte ou le résultat.)</p>
-        <p><strong>Technologies :</strong> PHP, WordPress, JavaScript</p>
-      </div>
-
-      <div class="project">
-        <h3>Nom du projet 2</h3>
-        <p>Description rapide du projet.</p>
-        <p><strong>Technologies :</strong> Symfony, MySQL, HTML/CSS</p>
-      </div>
-
-      <div class="project">
-        <h3>Nom du projet 3</h3>
-        <p>Description rapide du projet.</p>
-        <p><strong>Technologies :</strong> API REST, PHP, JS</p>
+      <div class="projects">
+        <div class="project">
+          <h3>Projet 1</h3>
+          <p>Description courte du projet et ton rôle.</p>
+          <p><strong>Technologies :</strong> PHP, WordPress, JS</p>
+        </div>
+        <div class="project">
+          <h3>Projet 2</h3>
+          <p>Description courte du projet.</p>
+          <p><strong>Technologies :</strong> Symfony, MySQL, HTML/CSS</p>
+        </div>
+        <div class="project">
+          <h3>Projet 3</h3>
+          <p>Description courte du projet.</p>
+          <p><strong>Technologies :</strong> API REST, PHP, JS</p>
+        </div>
       </div>
     </section>
 
-    <section>
+    <!-- Compétences -->
+    <section id="skills">
+      <h2>Compétences</h2>
+      <div class="skills">
+        <div class="skill">PHP</div>
+        <div class="skill">WordPress</div>
+        <div class="skill">Symfony</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">HTML / CSS</div>
+        <div class="skill">MySQL</div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
       <h2>Contact</h2>
-      <p>📧 <a href="mailto:dorsaf@example.com">dorsaf@example.com</a></p>
-      <p>🔗 <a href="https://www.linkedin.com/in/dorsafkheriji" target="_blank">LinkedIn</a></p>
-      <p>💻 <a href="https://github.com/dorsafkheriji" target="_blank">GitHub</a></p>
+      <div class="contact">
+        <p>📧 <a href="mailto:dorsaf@example.com">dorsaf@example.com</a></p>
+        <p>🔗 <a href="https://www.linkedin.com/in/dorsafkheriji" target="_blank">LinkedIn</a></p>
+        <p>💻 <a href="https://github.com/dorsafkheriji" target="_blank">GitHub</a></p>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     © 2025 Dorsaf Kheriji — Tous droits réservés
   </footer>
+
 </body>
 </html>
